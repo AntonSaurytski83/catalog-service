@@ -40,7 +40,7 @@ jobs:
       - name: Deliver application to production
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.local-dev-env }}
+          token: ${{ secrets.POLAR_SECRET }}
           repository: ${{ env.OWNER }}/${{ env.DEPLOY_REPO }}
           event-type: app_delivery
           client-payload: '{
