@@ -3,11 +3,11 @@ on:
   workflow_run:
     workflows: ['Commit Stage']
     types: [completed]
-    branches: main
+    branches: master
 concurrency: acceptance
 
 env:
-  OWNER: polarbookshop
+  OWNER: antonsaurytski83
   REGISTRY: ghcr.io
   APP_REPO: catalog-service
   DEPLOY_REPO: polar-deployment
