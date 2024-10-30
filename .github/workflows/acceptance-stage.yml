@@ -38,9 +38,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Deliver application to production
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          token: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
           repository: ${{ env.OWNER }}/${{ env.DEPLOY_REPO }}
           event-type: app_delivery
           client-payload: '{
