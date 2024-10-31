@@ -41,7 +41,7 @@ jobs:
       - name: Deliver application to production
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.GITHUB_ACTION_TOKEN }}
+          token: ${{ secrets.MY_GITHUB_ACTION_TOKEN }}
           repository: ${{ env.OWNER }}/${{ env.DEPLOY_REPO }}
           event-type: app_delivery
           client-payload: '{
