@@ -40,7 +40,6 @@ jobs:
     steps:
       - name: Deliver application to production
         uses: peter-evans/repository-dispatch@v3
-        permissions: write-all
         with:
           token: ${{ secrets.GITHUB_ACTION_TOKEN }}
           repository: ${{ env.OWNER }}/${{ env.DEPLOY_REPO }}
